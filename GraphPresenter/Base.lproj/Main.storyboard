@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JHq-Yi-Eba">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Statistics-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StatisticsViewController" customModule="GraphPresenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oeu-j5-Xho">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSQ-VC-afc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="SSQ-VC-afc" secondAttribute="bottom" id="0O2-N5-FI2"/>
+                                    <constraint firstItem="SSQ-VC-afc" firstAttribute="top" secondItem="Oeu-j5-Xho" secondAttribute="top" id="2XE-lb-Y7g"/>
+                                    <constraint firstAttribute="trailing" secondItem="SSQ-VC-afc" secondAttribute="trailing" id="SC2-hx-fJr"/>
+                                    <constraint firstItem="SSQ-VC-afc" firstAttribute="width" secondItem="Oeu-j5-Xho" secondAttribute="width" id="UDQ-mn-va4"/>
+                                    <constraint firstItem="SSQ-VC-afc" firstAttribute="centerY" secondItem="Oeu-j5-Xho" secondAttribute="centerY" placeholder="YES" id="WYN-o4-mkM"/>
+                                    <constraint firstItem="SSQ-VC-afc" firstAttribute="centerX" secondItem="Oeu-j5-Xho" secondAttribute="centerX" id="hD6-5O-KZN"/>
+                                    <constraint firstItem="SSQ-VC-afc" firstAttribute="leading" secondItem="Oeu-j5-Xho" secondAttribute="leading" id="hGS-ks-8Yu"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Oeu-j5-Xho" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KJO-te-lXX"/>
+                            <constraint firstItem="Oeu-j5-Xho" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Oey-EG-JM6"/>
+                            <constraint firstItem="Oeu-j5-Xho" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g3m-nR-q20"/>
+                            <constraint firstItem="Oeu-j5-Xho" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gVP-Ut-3Re"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Statistics" id="BJi-Tk-SDQ"/>
+                    <connections>
+                        <outlet property="stackContainerView" destination="SSQ-VC-afc" id="fQu-Vh-Hcr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569" y="20"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oGO-OQ-oKu">
+            <objects>
+                <navigationController id="JHq-Yi-Eba" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gFc-VN-4aL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Fx8-nP-m2h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wXO-J8-2EZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-582" y="134"/>
+        </scene>
+    </scenes>
+</document>
